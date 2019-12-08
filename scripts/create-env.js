@@ -1,2 +1,2 @@
 const fs = require('fs')
-fs.writeFileSync('./.env', `API_KEY=${process.env.DARKSKY_API_KEY}\n`)
+fs.writeFileSync('./.env', `DARKSKY_API_KEY=${process.env.DARKSKY_API_KEY}\n`)
