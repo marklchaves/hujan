@@ -1,5 +1,7 @@
 const fetch = require('node-fetch');
 
+console.log(process.env.DARK_SKY_KEY);
+
 exports.handler = async (event, context) => {
   try{
     const latitude  = event.queryStringParameters.latitude;
