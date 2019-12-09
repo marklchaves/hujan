@@ -5,14 +5,16 @@ exports.handler = async (event, context) => {
   try{
     const latitude  = event.queryStringParameters.latitude;
     const longitude = event.queryStringParameters.longitude;
+    
+    return await fetch(`https://api.darksky.net/forecast/${process.env.DARKSKY_API_KEY}/${latitude},${longitude}`);
 
-    const response = await fetch(`https://api.darksky.net/forecast/${process.env.DARKSKY_API_KEY}/${latitude},${longitude}`);
+/*    const response = await fetch(`https://api.darksky.net/forecast/${process.env.DARKSKY_API_KEY}/${latitude},${longitude}`);
     const data     = await response.json();
 
     return {
       statusCode: 200,
       body: JSON.stringify(data)
-    };
+    }; */
   } catch (err) {
     return {
       statusCode: 500,
