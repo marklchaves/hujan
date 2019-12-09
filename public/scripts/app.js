@@ -146,7 +146,8 @@ function renderForecast(card, data) {
  * @return {Object} The weather forecast, if the request fails, return null.
  */
 function getForecastFromNetwork(coords) {
-  return fetch(`/forecast/${coords}`)
+  // return fetch(`/forecast/${coords}`)
+  return fetch(`/.netlify/functions/forecast?longitude=40.7720232&latitude=-73.9732319`)
       .then((response) => {
         return response.json();
       })
