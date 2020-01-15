@@ -407,11 +407,11 @@ a {
 }
 
 .weather-card .future .oneday .temp-high,
-.weather-card .future .oneday .temp-low {
+.weather-card .future .oneday .temp-low .precip-prob {
   display: inline-block;
 }
 
-.weather-card .future .oneday .temp-low {
+.weather-card .future .oneday .temp-low .precip-prob {
   color: #666;
 }
 
