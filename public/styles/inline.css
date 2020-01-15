@@ -415,6 +415,12 @@ a {
   color: #666;
 }
 
+.weather-card .future .oneday .precip-prob:after {
+  content: "\0025";
+  font-size: 0.75em;
+  margin-left: -4px;
+}
+
 /**
  * Media query to adjust size of content for small screens
  */

@@ -115,6 +115,8 @@ function renderForecast(card, data) {
       .setZone(data.timezone)
       .toFormat('t');
   card.querySelector('.current .sunset .value').textContent = sunset;
+  card.querySelector('.precip-prob .value').textContent = Math.round(data.currently.precipProbability * 100) + '%';
+
 
   // Render the next 7 days.
   const futureTiles = card.querySelectorAll('.future .oneday');
@@ -131,7 +133,7 @@ function renderForecast(card, data) {
     tile.querySelector('.temp-low .value')
         .textContent = Math.round(forecast.temperatureLow);
     tile.querySelector('.precip-prob .value')
-        .textContent = (forecast.precipProbability * 100) + '%';
+        .textContent = Math.round(forecast.precipProbability * 100);
   });
 
   // If the loading spinner is still visible, remove it.
