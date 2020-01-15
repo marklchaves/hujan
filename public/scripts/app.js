@@ -130,6 +130,8 @@ function renderForecast(card, data) {
         .textContent = Math.round(forecast.temperatureHigh);
     tile.querySelector('.temp-low .value')
         .textContent = Math.round(forecast.temperatureLow);
+    tile.querySelector('.precip-prob .value')
+        .textContent = (forecast.precipProbability * 100) + '%';
   });
 
   // If the loading spinner is still visible, remove it.
@@ -146,7 +148,7 @@ function renderForecast(card, data) {
  * @return {Object} The weather forecast, if the request fails, return null.
  */
 function getForecastFromNetwork(coords) {
-   return fetch(`/forecast/${coords}`)
+  return fetch(`/forecast/${coords}`)
       .then((response) => {
         return response.json();
       })
