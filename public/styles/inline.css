@@ -381,6 +381,11 @@ a {
   vertical-align: super;
 }
 
+.weather-card .feels .scale {
+  font-size: 0.7em;
+  vertical-align: super;
+}
+
 .weather-card .current .visual,
 .weather-card .current .description {
   flex-grow: 1;
@@ -438,10 +443,16 @@ a {
 
   .weather-card .current .visual {
     font-size: 3em;
+    margin-bottom: 0.2em;
   }
 
   .weather-card .future .oneday .icon {
     height: 32px;
     width: 32px;
   }
+}
+
+.weather-card .feels {
+  font-size: 1.2em;
+  color: #666;
 }

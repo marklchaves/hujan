@@ -116,7 +116,7 @@ function renderForecast(card, data) {
       .toFormat('t');
   card.querySelector('.current .sunset .value').textContent = sunset;
   card.querySelector('.current .precip-prob .value').textContent = Math.round(data.currently.precipProbability * 100) + '%';
-  card.querySelector('.current .feels .value').textContent = Math.round(data.currently.apparentTemperature);
+  card.querySelector('.feels .value').textContent = Math.round(data.currently.apparentTemperature);
 
 
   // Render the next 7 days.
